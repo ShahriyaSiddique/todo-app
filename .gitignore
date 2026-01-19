@@ -1,0 +1,82 @@
+# =========================
+# OS / Editor
+# =========================
+.DS_Store
+Thumbs.db
+
+.vscode/
+.idea/
+
+# =========================
+# Logs
+# =========================
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# =========================
+# Environment variables
+# =========================
+.env
+.env.local
+.env.*.local
+
+# =========================
+# Node / Package managers
+# =========================
+node_modules/
+.pnpm-store/
+.npm/
+
+# =========================
+# Build outputs
+# =========================
+dist/
+build/
+.next/
+out/
+coverage/
+
+# =========================
+# TypeScript
+# =========================
+*.tsbuildinfo
+
+# =========================
+# NestJS
+# =========================
+nestjs-cli.json
+tmp/
+.cache/
+
+# =========================
+# TypeORM
+# =========================
+*.sqlite
+*.sqlite3
+
+# =========================
+# Docker
+# =========================
+docker-data/
+**/docker-data/
+
+# =========================
+# MySQL (local dumps)
+# =========================
+*.sql
+*.dump
+
+# =========================
+# Testing
+# =========================
+.jest/
+reports/
+
+# =========================
+# Misc
+# =========================
+*.swp
+*.swo
