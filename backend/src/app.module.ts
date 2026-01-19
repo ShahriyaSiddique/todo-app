@@ -1,7 +1,8 @@
-import { Module } from '@nestjs/common';
+import { MiddlewareConsumer, Module, NestModule } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { TodoModule } from './todo/todo.module';
+import { JwtAuthMiddleware } from './auth/jwt-auth.middleware';
 
 @Module({
   imports: [
@@ -24,4 +25,8 @@ import { TodoModule } from './todo/todo.module';
     TodoModule,
   ],
 })
-export class AppModule {}
+export class AppModule implements NestModule {
+  configure(consumer: MiddlewareConsumer) {
+    consumer.apply(JwtAuthMiddleware).forRoutes('todos');
+  }
+}
